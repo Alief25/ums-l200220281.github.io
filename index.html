@@ -1,12 +1,68 @@
-<html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Selamat Datang di Website Saya</title>
+    <title>Proses Kuliah dengan Metaflow</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f9;
+        }
+        pre {
+            background-color: #2b2b2b;
+            color: #f8f8f2;
+            padding: 20px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-size: 14px;
+        }
+        h1 {
+            color: #333;
+        }
+    </style>
 </head>
 <body>
-    <h1>Halo, Dunia!</h1>
-    <p>Ini adalah website pertama saya yang dihosting di GitHub Pages.</p>
+    <h1>Proses Kuliah dengan Metaflow</h1>
+    <p>Berikut adalah kode program Python menggunakan Metaflow:</p>
+    <pre>
+from metaflow import FlowSpec, step
+
+class ProsesKuliahFlow(FlowSpec):
+
+    @step
+    def start(self):
+        print("=== Proses Kuliah Mahasiswa ===\\n")
+        print("Langkah 1: Pembayaran SPP")
+        self.next(self.ambil_mata_kuliah)
+    
+    @step
+    def ambil_mata_kuliah(self):
+        print("Langkah 2: Mengambil Mata Kuliah")
+        self.next(self.ikut_kuliah)
+
+    @step
+    def ikut_kuliah(self):
+        print("Langkah 3: Mengikuti Perkuliahan")
+        self.next(self.input_nilai)
+
+    @step
+    def input_nilai(self):
+        print("Langkah 4: Menginput Nilai")
+        self.next(self.nilai_akhir)
+
+    @step
+    def nilai_akhir(self):
+        print("Langkah 5: Mendapatkan Nilai Akhir")
+        self.next(self.end)
+
+    @step
+    def end(self):
+        print("Proses kuliah telah selesai.")
+
+if __name__ == '__main__':
+    ProsesKuliahFlow()
+    </pre>
 </body>
 </html>
