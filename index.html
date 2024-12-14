@@ -3,66 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proses Kuliah dengan Metaflow</title>
+    <title>Proses Kuliah Informatika</title>
+    <h1>Oleh</h1>
+    <h1>Muhammad Alief Adhitya Pratama</h1>
+    <h1>L200220281</h1>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f4f4f9;
-        }
-        pre {
-            background-color: #2b2b2b;
-            color: #f8f8f2;
-            padding: 20px;
-            border-radius: 5px;
-            overflow-x: auto;
-            font-size: 14px;
+            margin: 40px;
+            background-color: #f9f9f9;
+            color: #333;
         }
         h1 {
-            color: #333;
+            color: #0078D7;
+        }
+        .box {
+            background-color: #f1f1f1;
+            padding: 15px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .code-box {
+            background-color: #272822;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-family: "Courier New", Courier, monospace;
+        }
+        .output-box {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: "Courier New", Courier, monospace;
+            white-space: pre-wrap; /* Allows long text to wrap */
+            word-wrap: break-word;
         }
     </style>
 </head>
 <body>
-    <h1>Proses Kuliah dengan Metaflow</h1>
-    <p>Berikut adalah kode program Python menggunakan Metaflow:</p>
-    <pre>
-from metaflow import FlowSpec, step
-
-class ProsesKuliahFlow(FlowSpec):
-
-    @step
-    def start(self):
-        print("=== Proses Kuliah Mahasiswa ===\\n")
-        print("Langkah 1: Pembayaran SPP")
-        self.next(self.ambil_mata_kuliah)
+    <h1>Proses Mengikuti Kuliah di Informatika</h1>
     
-    @step
-    def ambil_mata_kuliah(self):
-        print("Langkah 2: Mengambil Mata Kuliah")
-        self.next(self.ikut_kuliah)
+    <div class="box">
+        <h2>Kode Program</h2>
+        <div class="code-box">
+            <code>
+import time
 
-    @step
-    def ikut_kuliah(self):
-        print("Langkah 3: Mengikuti Perkuliahan")
-        self.next(self.input_nilai)
+def bayar_spp():
+    print("=== Langkah 1: Pembayaran SPP ===")
+    print("Mahasiswa membayar SPP untuk dapat mengikuti perkuliahan.")
+    time.sleep(1)
+    print("Status: SPP telah dibayar.\n")
 
-    @step
-    def input_nilai(self):
-        print("Langkah 4: Menginput Nilai")
-        self.next(self.nilai_akhir)
+def ambil_mata_kuliah():
+    print("=== Langkah 2: Mengambil Mata Kuliah ===")
+    print("Mahasiswa memilih mata kuliah yang ingin diambil.")
+    time.sleep(1)
+    print("Status: Mata kuliah telah diambil.\n")
 
-    @step
-    def nilai_akhir(self):
-        print("Langkah 5: Mendapatkan Nilai Akhir")
-        self.next(self.end)
+def mengikuti_perkuliahan():
+    print("=== Langkah 3: Mengikuti Perkuliahan ===")
+    print("Mahasiswa mengikuti jadwal perkuliahan.")
+    time.sleep(1)
+    print("Status: Materi telah dipelajari.\n")
 
-    @step
-    def end(self):
-        print("Proses kuliah telah selesai.")
+def mengerjakan_tugas_ujian():
+    print("=== Langkah 4: Mengerjakan Tugas dan Ujian ===")
+    print("Mahasiswa menyelesaikan tugas dan ujian.")
+    time.sleep(1)
+    print("Status: Semua telah selesai.\n")
 
-if __name__ == '__main__':
-    ProsesKuliahFlow()
-    </pre>
+def mendapatkan_nilai():
+    print("=== Langkah 5: Mendapatkan Nilai Akhir ===")
+    nilai = input("Masukkan nilai akhir (A/B/C/D/E): ").upper()
+    if nilai in ["A", "B", "C"]:
+        print(f"Status: Nilai {nilai}. Selamat, Anda lulus!\n")
+    else:
+        print(f"Status: Nilai {nilai}. Anda belum lulus.\n")
+
+def proses_kuliah():
+    bayar_spp()
+    ambil_mata_kuliah()
+    mengikuti_perkuliahan()
+    mengerjakan_tugas_ujian()
+    mendapatkan_nilai()
+
+if __name__ == "__main__":
+    proses_kuliah()
+            </code>
+        </div>
+    </div>
+
+    <div class="box">
+        <h2>Output Program</h2>
+        <div class="output-box">
+            === Langkah 1: Pembayaran SPP ===<br>
+            Mahasiswa membayar SPP untuk dapat mengikuti perkuliahan.<br>
+            Status: SPP telah dibayar.<br><br>
+
+            === Langkah 2: Mengambil Mata Kuliah ===<br>
+            Mahasiswa memilih mata kuliah yang ingin diambil.<br>
+            Status: Mata kuliah telah diambil.<br><br>
+
+            === Langkah 3: Mengikuti Perkuliahan ===<br>
+            Mahasiswa mengikuti jadwal perkuliahan.<br>
+            Status: Materi telah dipelajari.<br><br>
+
+            === Langkah 4: Mengerjakan Tugas dan Ujian ===<br>
+            Mahasiswa menyelesaikan tugas dan ujian.<br>
+            Status: Semua telah selesai.<br><br>
+
+            === Langkah 5: Mendapatkan Nilai Akhir ===<br>
+            Masukkan nilai akhir (A/B/C/D/E): A<br>
+            Status: Nilai A. Selamat, Anda lulus!<br>
+        </div>
+    </div>
+
 </body>
 </html>
