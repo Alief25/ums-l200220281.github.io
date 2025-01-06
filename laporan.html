@@ -6,22 +6,61 @@
     <style>
             body {
                 background-image: url('bg.jpg');
-                background-size: cover; 
-                background-repeat: no-repeat; 
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                color: white;
+                text-align: center;
             }
-            .nama-nim { /* Tambahkan class untuk nama dan nim */
-                font-size: 1.5em; /* Ubah ukuran font */
-                font-weight: bold;/* Ubah font weight */
+            .container {
+                background-color: rgba(0, 0, 0, 0.8);
+                padding: 20px;
+                border-radius: 10px;
+                margin-top: 50px;
+            }
+            .nama-nim {
+                font-size: 1.5em;
+                font-weight: bold;
+            }
+            .img-fluid {
+                max-width: 65%;
+                height: auto;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .back-button {
+                position: absolute;
+                top: 20px;
+                right: 20px;
             }
         </style>
   </head>
   <body>
     <div class="container">
-      <h1>Laporan Hasil</h1>
+      <h1>Laporan Hasil Clustering</h1>
       <p class="nama-nim">Nama: Muhammad Alief Adhitya Pratama</p>
       <p class="nama-nim">NIM: L200220281</p>
-      <h2>hasil dari kluster ke 2 </h2>
-      <table class="table table-striped">
+      <h2>Penjelasan Langkah-langkah</h2>
+      <ul>
+        <li>
+          <p>Langkah 1: Data dimuat dari file CSV yang berisi pesan.</p>
+          <img alt="Gambar Langkah 1" class="img-fluid" src="gambar1.png">
+        </li>
+        <li>
+          <p>Langkah 2: Data diproses menggunakan TF-IDF untuk merepresentasikan pesan dalam bentuk numerik.</p>
+          <img alt="Gambar Langkah 2" class="img-fluid" src="gambar2.png">
+        </li>
+        <li>
+          <p>Langkah 3 &amp; 4: Data dikelompokkan menggunakan algoritma K-Means dengan berbagai jumlah cluster.</p>
+          <img alt="Gambar Langkah 3 &amp; 4" class="img-fluid" src="gambar3.png">
+        </li>
+        <li>
+          <p>Langkah 5: Hasil clustering ditampilkan dalam laporan HTML.</p>
+        </li>
+      </ul>
+      <h2>Hasil Klustering untuk 2 Cluster</h2>
+      <table class="table table-striped text-light">
         <thead>
           <tr>
             <th>Kluster</th>
@@ -39,8 +78,8 @@
           </tr>
         </tbody>
       </table>
-      <h2>hasil dari kluster ke 3 </h2>
-      <table class="table table-striped">
+      <h2>Hasil Klustering untuk 3 Cluster</h2>
+      <table class="table table-striped text-light">
         <thead>
           <tr>
             <th>Kluster</th>
@@ -58,12 +97,12 @@
           </tr>
           <tr>
             <td>3</td>
-            <td>231022, 82322491065, materi</td>
+            <td>231022, 62, 82322491065</td>
           </tr>
         </tbody>
       </table>
-      <h2>hasil dari kluster ke 4 </h2>
-      <table class="table table-striped">
+      <h2>Hasil Klustering untuk 4 Cluster</h2>
+      <table class="table table-striped text-light">
         <thead>
           <tr>
             <th>Kluster</th>
@@ -81,16 +120,16 @@
           </tr>
           <tr>
             <td>3</td>
-            <td>231022, 82322491065, materi</td>
+            <td>231022, 62, 82322491065</td>
           </tr>
           <tr>
             <td>4</td>
-            <td>nilai, kepemimpinan, lip</td>
+            <td>nilai, kepemimpinan, orang</td>
           </tr>
         </tbody>
       </table>
-      <h2>hasil dari kluster ke 5 </h2>
-      <table class="table table-striped">
+      <h2>Hasil Klustering untuk 5 Cluster</h2>
+      <table class="table table-striped text-light">
         <thead>
           <tr>
             <th>Kluster</th>
@@ -112,14 +151,15 @@
           </tr>
           <tr>
             <td>4</td>
-            <td>nilai, kepemimpinan, lip</td>
+            <td>nilai, kepemimpinan, orang</td>
           </tr>
           <tr>
             <td>5</td>
-            <td>271022, 85713949974, 895429580105</td>
+            <td>271022, 85713949974, 62</td>
           </tr>
         </tbody>
       </table>
     </div>
+    <a class="btn btn-primary back-button" href="index.html">Kembali ke Halaman Utama</a>
   </body>
 </html>
