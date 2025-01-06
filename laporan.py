@@ -71,7 +71,7 @@ def main():
             h2('Penjelasan Langkah-langkah')
             with ul():
                 with li():
-                    p("Langkah 1: Data dimuat dari file CSV yang berisi pesan.")
+                    p("Langkah 1: Data dimuat dari file txt yang berisi pesan.")
                     img(src='gambar1.png', alt='Gambar Langkah 1', cls='img-fluid')
                 with li():
                     p("Langkah 2: Data diproses menggunakan TF-IDF untuk merepresentasikan pesan dalam bentuk numerik.")
